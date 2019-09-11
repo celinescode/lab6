@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <link rel='stylesheet' href = 'styles.css'>
+    </head>
+    <body>
+        
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>LEVEL</th>
+                <th>ADDRESS</th>
+
+
+                
+            </tr>
+            <% for(i=0;i<devDB.length;i++){ %>   
+                <tr>
+                    <td> <%= devDB[i]._id %> </td>
+                    <td> <%= devDB[i].name %> </td>
+                    <td> <%= devDB[i].level %> </td>
+                    <td> <%= devDB[i].address %> </td>
+                    
+                </tr>    
+            <% }%>
+        </table>
+        <h3>
+            <a href="/">Home</a>
+            <a href="/newtask">Add a Task</a>
+            <a href="/deletetask">Delete Tasks by ID</a>
+            <a href="/deletecomplete">Delete Completed Tasks</a>
+            <a href="/updatetask">Update Tasks</a>
+        </h3>
+    </body>
+</html>
